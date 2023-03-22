@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if weather_data %}
+    <h2>{{ weather_data.name }}, {{ weather_data.sys.country }}</h2>
+    <p>Current temperature in kelvin: {{ weather_data.main.temp.kelvin }}&deg;K</p>
+    <p>Current temperature in celsius: {{ weather_data.main.temp.celsius }}&deg;C</p>
+    <p>Current temperature fahrenheit: {{ weather_data.main.temp.fahrenheit }}&deg;F</p>
+    <p>Humidity: {{ weather_data.main.humidity }}%</p>
+    <p>Wind speed: {{ weather_data.wind.speed }}m/s</p>
+    <p>Latitude: {{ weather_data.coord.lat }}m/s</p>
+    <p>Weather: {{ weather_data.weather.0.description }}</p>
+    <div id="map">{{ map_html|safe }}</div>
+    {% else %}
+    <h2> Location is not valid </h2>
+    {% endif %}
+    
+
+</body>
+</html>
