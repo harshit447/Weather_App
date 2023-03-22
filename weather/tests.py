@@ -7,6 +7,9 @@ from weather.views import weather, get_weather_from_openweathermap
 class WeatherTest(TestCase):
     @patch("weather.views.requests.get")
     def test_get_weather_from_openweathermap(self, mock_get):
+        """
+        Test the `get_weather_from_openweathermap` function with both a valid and invalid location.
+        """
         mock_data = {
             "main": {"temp": 283.57},
             "wind": {"speed": 3.3},
@@ -28,6 +31,9 @@ class WeatherTest(TestCase):
 
     @patch("weather.views.get_weather_from_openweathermap")
     def test_weather_view(self, mock_weather_data):
+        """
+        Test the `weather` view function with both a GET and POST request, and with both valid and invalid data.
+        """
         mock_weather_data.return_value = {
             "main": {"temp": {"kelvin": 283.57, "celsius": 10.42, "fahrenheit": 50.76}},
             "wind": {"speed": 3.3},
