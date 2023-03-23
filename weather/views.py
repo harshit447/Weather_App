@@ -39,7 +39,7 @@ def get_weather_from_openweathermap(location):
             marker.add_to(map)
             # Generate the HTML for the map
             map_html = map._repr_html_()
-        print(weather_data)
+            print(weather_data)
         return weather_data
     except Exception:
         return {}
