@@ -1,7 +1,6 @@
 # Weather_App
 A simple web application that allows users to check the current weather and other related information of a particular location.
 
-Weather_App Screenshot
 
 # Features
 Get the current temperature, humidity, wind speed, and weather description of a specific location
