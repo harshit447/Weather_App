@@ -27,8 +27,7 @@ This application uses the OpenWeatherMap API to fetch weather data. To use this 
 const API_KEY = 'YOUR_API_KEY_HERE';
 
 # Credits
-This project was created by Harshit Gupta. The application uses the following resources:
+This project was created by Harshit Aneja. The application uses the following resources:
 
 OpenWeatherMap API (https://openweathermap.org/)
-Leaflet.js library (https://leafletjs.com/)
-Google Fonts (https://fonts.google.com/)
+
